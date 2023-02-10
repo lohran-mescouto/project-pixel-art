@@ -45,9 +45,9 @@ for (let index = 0; index < 5; index += 1) {
   const linhaPixel = document.createElement('div');
   linhaPixel.classList.add('linhaPixel');
 
-  for (let i = 0; i < 5; i +=1) {
+  for (let i = 0; i < 5; i += 1) {
     const quadro = document.createElement('div');
-    quadro.classList.add('pixel')
+    quadro.classList.add('pixel');
     // quadro.style.backgroundColor = 'white';
 
     linhaPixel.appendChild(quadro);
@@ -57,3 +57,5 @@ for (let index = 0; index < 5; index += 1) {
 
 // const savedColors = localStorage.getItem('colorPalette');
 // document.getElementsByClassName('color').style.backgroundColor = savedColors;
+
+document.querySelector('.color').classList.add('selected');
