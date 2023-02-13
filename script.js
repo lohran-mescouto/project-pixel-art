@@ -43,7 +43,7 @@ fixedColors();
 const quadroPixel = document.getElementById('pixel-board');
 for (let index = 0; index < 5; index += 1) {
   const linhaPixel = document.createElement('div');
-  linhaPixel.classList.add('linhaPixel');
+  linhaPixel.classList.add('pixel-board');
 
   for (let i = 0; i < 5; i += 1) {
     const quadro = document.createElement('div');
