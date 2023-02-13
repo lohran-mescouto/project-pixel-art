@@ -16,5 +16,5 @@
   height: 40px;
   background-color: white;
   border: 1px black solid;
-  display: inline-block;
+  display: table-cell;
 }

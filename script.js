@@ -58,4 +58,29 @@ for (let index = 0; index < 5; index += 1) {
 // const savedColors = localStorage.getItem('colorPalette');
 // document.getElementsByClassName('color').style.backgroundColor = savedColors;
 
+// requisito 8
 document.querySelector('.color').classList.add('selected');
+
+// requisito 9
+// const colorSelected = document.getElementsByClassName('.color');
+// for (let index = 0; index < colorSelected.length; index += 1) {
+//   colorSelected[index].addEventListener('click', function () {
+//     const corAtual = document.getElementsByClassName('.selected')[index];
+//     if (corAtual) {
+//       corAtual.classList.remove('selected');
+//       // for (let j = 0; j < colorSelected.length; j += 1) {
+//       //   colorSelected[j].classList.remove('selected');
+//       //   classList.remove('selected');
+//     }
+//     this.classList.add('selected');
+//   });
+// };
+const colorSelected = document.getElementsByClassName("color");
+for (let index = 0; index < colorSelected.length; index += 1) {
+  colorSelected[index].addEventListener("click", function() {
+    for (let i = 0; i < colorSelected.length; i += 1) {
+      colorSelected[i].classList.remove("selected");
+    }
+    this.classList.add("selected");
+  });
+}
