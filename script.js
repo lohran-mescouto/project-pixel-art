@@ -87,7 +87,7 @@ for (let index = 0; index < colorSelected.length; index += 1) {
 
 // requisito 10
 const quadro = document.getElementsByClassName('pixel');
-for (index = 0; index < quadro.length; index += 1) {
+for (let index = 0; index < quadro.length; index += 1) {
   quadro[index].addEventListener('click', function () {
     const selecionadaCor = document.querySelector('.selected').style.backgroundColor;
     this.style.backgroundColor = selecionadaCor;
