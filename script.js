@@ -43,7 +43,7 @@ fixedColors();
 const quadroPixel = document.getElementById('pixel-board');
 for (let index = 0; index < 5; index += 1) {
   const linhaPixel = document.createElement('div');
-  linhaPixel.classList.add('pixel-board');
+  linhaPixel.classList.add('linhaPixel');
 
   for (let i = 0; i < 5; i += 1) {
     const quadro = document.createElement('div');
@@ -75,12 +75,21 @@ document.querySelector('.color').classList.add('selected');
 //     this.classList.add('selected');
 //   });
 // };
-const colorSelected = document.getElementsByClassName("color");
+const colorSelected = document.getElementsByClassName('color');
 for (let index = 0; index < colorSelected.length; index += 1) {
-  colorSelected[index].addEventListener("click", function() {
+  colorSelected[index].addEventListener('click', function () {
     for (let i = 0; i < colorSelected.length; i += 1) {
-      colorSelected[i].classList.remove("selected");
+      colorSelected[i].classList.remove('selected');
     }
-    this.classList.add("selected");
+    this.classList.add('selected');
+  });
+}
+
+// requisito 10
+const quadro = document.getElementsByClassName('pixel');
+for (index = 0; index < quadro.length; index += 1) {
+  quadro[index].addEventListener('click', function () {
+    const selecionadaCor = document.querySelector('.selected').style.backgroundColor;
+    this.style.backgroundColor = selecionadaCor;
   });
 }
