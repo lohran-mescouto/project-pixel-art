@@ -93,3 +93,12 @@ for (let index = 0; index < quadro.length; index += 1) {
     this.style.backgroundColor = selecionadaCor;
   });
 }
+
+// requisito 11
+const btnLimpar = document.getElementById('clear-board');
+btnLimpar.addEventListener('click', function () {
+  const quadroBranco = document.getElementsByClassName('pixel');
+  for (let i = 0; i < quadroBranco.length; i += 1) {
+    quadroBranco[i].style.backgroundColor = 'white';
+  }
+});
